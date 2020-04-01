@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css" media="screen" type="text/css">
+    <title>
+        Tytuł strony
+    </title>
+</head>
+
+<body>
+    <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+        <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+        <div class="title-bar-title">Menu</div>
+    </div>
+    <div class="top-bar" id="example-menu">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">Dziekanat</li>
+                <li>
+                    <a href="#">Studia</a>
+                    <ul class="menu vertical">
+                        <li><a href="#">Stacjonarne</a></li>
+                        <li><a href="#">Nie stacjonarne</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <h1>Informatyka WIET</h1>
+        <div class="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
+            <div class="cell">
+                <div class="card">
+                    <p>Jan Orzeszek</p>
+                    <h2>Informatyka</h2>
+                    <img src="img1.jpg">
+                    <div class="card-section">
+                        <p>Aktualne stanowisko: profesor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="card">
+                    <p>Anna Nowak</p>
+                    <h2>Fizyka</h2>
+                    <img src="img1.jpg">
+                    <div class="card-section">
+                        <p>Aktualne stanowisko: adiunkt</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="card">
+                    <p>Paweł Marcjan</p>
+                    <h2>Elektornika</h2>
+                    <img src="img1.jpg">
+                    <div class="card-section">
+                        <p>Aktualne stanowisko: asystent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Tutaj treść stopki / Here the content of the footer -->
+        <a href="mailto:twoj.adres.email">Imię Nazwisko</a>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/js/foundation.min.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+
+</html>

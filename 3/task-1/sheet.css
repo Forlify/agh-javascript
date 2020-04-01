@@ -1,0 +1,25 @@
+@media screen and (max-width: 992px) {
+    .title {
+             color: blue;
+    }
+}
+    
+@media screen and (max-width: 768px) {
+    .title {
+             color: red;
+    }
+}
+    
+@keyframes colors {
+    0% {
+        color:red;
+    }
+    
+    50% {
+        color:blue;
+    }
+    
+    100% {
+        color:green;
+    }
+}

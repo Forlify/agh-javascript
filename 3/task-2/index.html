@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href="css/style.css" rel="stylesheet">
+  </link>
+</head>
+
+<body>
+
+  <span id="checkbox-group">
+    <input id="use-blocking-js" type="checkbox" name="worker" value="use-blocking-js" checked>Use blocking call in main
+    thread</input>
+    <input id="use-request-animation-frame" type="checkbox" name="worker" value="request-animation-frame">Use
+    requestAnimationFrame</input>
+    <input id="use-interval" type="checkbox" name="worker" value="use-interval">Use setInterval</input>
+    <input id="use-timeout" type="checkbox" name="worker" value="use-timeout">Use setTimeout</input>
+    <input id="use-worker" type="checkbox" name="worker" value="use-worker">Use a worker</input>
+
+  </span>
+
+  <input id="pointless-computations" type="button" name="pointless-computations" value="Do pointless computations!" />
+
+  <input id="start-stop" type="button" name="start-stop" value="Start animations" />
+
+  <div id="container">
+    <div class="moving-box"></div>
+  </div>
+
+  <div id="chartContainer"></div>
+
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript" src="js/charts.js"></script>
+  <script type="text/javascript" src="js/blocking.js"></script>
+  <script type="text/javascript" src="js/requestAnimationFrame.js"></script>
+  <script type="text/javascript" src="js/worker.js"></script>
+  <script type="text/javascript" src="js/interval.js"></script>
+  <script type="text/javascript" src="js/timeout.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

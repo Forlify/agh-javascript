@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text Processing in Python</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGBbn_Bvz42Ad45mdwLzsjqSkKaDbvl0nYqwwlg-PlRWGG8-jC"
+                    width="30" height="30">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+
+                <a class="navbar-item"
+                    href="https://ucilnica.fri.uni-lj.si/pluginfile.php/46018/mod_resource/content/1/Python%203%20Text%20Processing%20with%20NLTK%203%20Cookbook.pdf"
+                    target="_blank">
+                    Download in PDF
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-info is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">Tokenizing sentences using regular
+                    expressions</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <p class="subtitle">Tokenizing sentences using regular
+                expressions</p>
+            <p>
+                Installation instructions for NLTK are available at http://nltk.org/install.html and
+                the latest version at the time of writing this is Version 3.0b1. This version of NLTK is built for
+                Python 3.0 or higher, but it is backwards compatible with Python 2.6 and higher. In this book,
+                we will be using Python 3.3.2. If you've used earlier versions of NLTK (such as version 2.0),
+                note that some of the APIs have changed in Version 3 and are not backwards compatible.
+            </p><br>
+            <p>
+                Once you've installed NLTK, you'll also need to install the data following the instructions at
+                http://nltk.org/data.html. I recommend installing everything, as we'll be using a
+                number of corpora and pickled objects. The data is installed in a data directory, which on
+                Mac and Linux/Unix is usually /usr/share/nltk_data, or on Windows is C:\nltk_data.
+                Make sure that tokenizers/punkt.zip is in the data directory and has been unpacked so
+                that there's a file at tokenizers/punkt/PY3/english.pickle.
+            </p><br>
+            <p>
+                Finally, to run the code examples, you'll need to start a Python console. Instructions on how
+                to do so are available at http://nltk.org/install.html. For Mac and Linux/Unix users,
+                you can open a terminal and type python.
+            </p>
+            <p class="subtitle" style="margin-top: 30px;">How to do it...</p>
+            <p>
+                Once NLTK is installed and you have a Python console running, we can start by creating a
+                paragraph of text:
+            </p>
+            <p style="margin: 20px 0;">
+                <code>
+                >>> para = " Hello World. It's good to see you. Thanks for buying this book." </code>
+            </p>
+            <p>
+                Now we want to split the paragraph into sentences. First we need to import the sentence
+                tokenization function, and then we can call it with the paragraph as an argument:
+            </p>
+            <p style="margin: 20px 0;">
+                <code>
+                    >>> from nltk.tokenize import sent_tokenize
+>>> sent_tokenize(para)
+['Hello World.', "It's good to see you.", 'Thanks for buying this
+book.']
+                </code>
+            </p>
+            <p>
+                So now we have a list of sentences that we can use for further processing.
+            </p>
+            <p class="subtitle" style="margin-top: 30px;">How it works...</p>
+            <p>
+                The sent_tokenize function uses an instance of PunktSentenceTokenizer from the
+                nltk.tokenize.punkt module. This instance has already been trained and works well for
+                many European languages. So it knows what punctuation and characters mark the end of a
+                sentence and the beginning of a new sentence.
+            </p>
+            <p class="subtitle" style="margin-top: 30px;">There's more...</p>
+            <p>
+                RegexpTokenizer can also work by matching the gaps, as opposed to the tokens. Instead
+                of using re.findall(), the RegexpTokenizer class will use re.split(). This is how the
+                BlanklineTokenizer class in nltk.tokenize is implemented. The following is a simple example of using
+                RegexpTokenizer to tokenize on whitespace:
+            </p>
+            <p style="margin: 20px 0;">
+                <code>
+                    >>> tokenizer = RegexpTokenizer('\s+', gaps=True)
+>>> tokenizer.tokenize("Can't is a contraction.")
+["Can't", 'is', 'a', 'contraction.']
+                </code>
+            </p>
+            <p>
+                Notice that punctuation still remains in the tokens. The gaps=True parameter means that
+                the pattern is used to identify gaps to tokenize on. If we used gaps=False, then the pattern
+                would be used to identify tokens.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>PythonT</strong> by <a href="https://blazejkustra.com" target="_blank">Błażej Kustra</a>. The
+                book is free to use and licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+        </div>
+        <div class="content has-text-centered">
+            <p class="subtitle">
+                <a href="/">
+                    <i class="fas fa-home"></i>
+
+                    <span>Home page</span>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+</body>
+
+</html>

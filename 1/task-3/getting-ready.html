@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text Processing in Python</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGBbn_Bvz42Ad45mdwLzsjqSkKaDbvl0nYqwwlg-PlRWGG8-jC"
+                    width="30" height="30">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+
+                <a class="navbar-item"
+                    href="https://ucilnica.fri.uni-lj.si/pluginfile.php/46018/mod_resource/content/1/Python%203%20Text%20Processing%20with%20NLTK%203%20Cookbook.pdf"
+                    target="_blank">
+                    Download in PDF
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-info is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">Getting ready</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <p class="subtitle">Getting ready</p>
+            <p>
+                Regular expressions can be used if you want complete control over how to tokenize text.
+                As regular expressions can get complicated very quickly, I only recommend using them if
+                the word tokenizers covered in the previous recipe are unacceptable.
+            </p>
+            <p class="subtitle" style="margin-top: 30px;">How to do it...</p>
+            <p>
+                We'll create an instance of RegexpTokenizer, giving it a regular expression string to use for
+                matching tokens:
+            </p>
+            <p style="margin: 20px 0;">
+                <code>
+                    >>> from nltk.tokenize import RegexpTokenizer
+>>> tokenizer = RegexpTokenizer("[\w']+")
+>>> tokenizer.tokenize("Can't is a contraction.")
+["Can't", 'is', 'a', 'contraction']
+                </code>
+            </p>
+            <p>
+                There's also a simple helper function you can use if you don't want to instantiate the class,
+                as shown in the following code:
+            </p>
+            <p style="margin: 20px 0;">
+                <code>
+                    >>> from nltk.tokenize import regexp_tokenize
+>>> regexp_tokenize("Can't is a contraction.", "[\w']+")
+["Can't", 'is', 'a', 'contraction']
+                </code>
+            </p>
+            <p>
+                Now we finally have something that can treat contractions as whole words, instead of splitting
+                them into tokens.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>PythonT</strong> by <a href="https://blazejkustra.com" target="_blank">Błażej Kustra</a>. The
+                book is free to use and licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+        </div>
+        <div class="content has-text-centered">
+            <p class="subtitle">
+                <a href="/">
+                    <i class="fas fa-home"></i>
+
+                    <span>Home page</span>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // Check for click events on the navbar burger icon
+            $(".navbar-burger").click(function () {
+
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+
+            });
+        });
+    </script>
+</body>
+
+</html>

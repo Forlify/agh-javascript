@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Text Processing in Python</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTGBbn_Bvz42Ad45mdwLzsjqSkKaDbvl0nYqwwlg-PlRWGG8-jC"
+                    width="30" height="30">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="/">
+                    Home
+                </a>
+
+                <a class="navbar-item"
+                    href="https://ucilnica.fri.uni-lj.si/pluginfile.php/46018/mod_resource/content/1/Python%203%20Text%20Processing%20with%20NLTK%203%20Cookbook.pdf"
+                    target="_blank">
+                    Download in PDF
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero is-info is-bold">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">Python w statystykach!</h1>
+                <p class="subtitle">Python jest jednym z najszybciej rozwijaących się jezyków, poznaj statystyki
+                    dotyczące jego rozwoju!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="container">
+
+            <h1 class="title has-text-centered" style="margin: 20px 0"> Popularność języków programowania 2020.</h1>
+            <table class="table is-fullwidth is-bordered is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Change</th>
+                        <th>Language</th>
+                        <th>Share</th>
+                        <th>Trend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <td><i class="fas fa-arrow-up"></i><i class="fas fa-arrow-up"></i></td>
+                        <td>Python</td>
+                        <td>29.88%</td>
+                        <td>+4.1%</td>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <td><i class="fas fa-arrow-down"></i><i class="fas fa-arrow-down"></i></td>
+                        <td>Java</td>
+                        <td>19.22%</td>
+                        <td>-1.8%</td>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <td><i class="fas fa-arrow-up"></i></td>
+                        <td>JavaScript</td>
+                        <td>8.66%</td>
+                        <td>+0.1%</td>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <td></td>
+                        <td>C#</td>
+                        <td>7.23%</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <td><i class="fas fa-arrow-down"></i></td>
+                        <td>PHP</td>
+                        <td>6.54%</td>
+                        <td>-1%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="container">
+            <h1 class="title has-text-centered" style="margin: 40px 0 20px"> Jeden jezyk, miliony poradników:</h1>
+
+            <div class="columns">
+                <div class="column">
+                    <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="column">
+                    <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="column">
+                    <iframe src="https://www.youtube.com/embed/4F2m91eKmts" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column">
+                    <iframe src="https://www.youtube.com/embed/H1elmMBnykA" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="column">
+                    <iframe src="https://www.youtube.com/embed/e1IyzVyrLSU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="column">
+                    <iframe src="https://www.youtube.com/embed/chPhlsHoEPo" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <p class="subtitle has-text-centered" style="margin: 10px 0"> Chcesz nauczyć się więcej?</p>
+            <div class="has-text-centered">
+                <a class="button" style="margin-bottom: 30px"
+                    href="https://ucilnica.fri.uni-lj.si/pluginfile.php/46018/mod_resource/content/1/Python%203%20Text%20Processing%20with%20NLTK%203%20Cookbook.pdf"
+                    target="_blank">
+                    <span class="icon is-small">
+                        <i class="fas fa-download"></i>
+                    </span>
+                    <span>Pobierz!</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>PythonT</strong> by <a href="https://blazejkustra.com" target="_blank">Błażej Kustra</a>. The
+                book is free to
+                use and
+                licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+            </p>
+        </div>
+        <div class="content has-text-centered">
+            <p class="subtitle">
+                <a href="/">
+                    <i class="fas fa-home"></i>
+
+                    <span>Home page</span>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".navbar-burger").click(function () {
+                $(".navbar-burger").toggleClass("is-active");
+                $(".navbar-menu").toggleClass("is-active");
+            });
+        });
+    </script>
+</body>
+
+</html>
