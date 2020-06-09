@@ -16,5 +16,9 @@ Repository for JavaScript laboratories at AGH UST, Poland.
 5. **Express.js**
    - Introduction to NPM 
    - Developing a simple web application with `mongoDB` 
-6. **AJAX**
+6. **AJAX & Fetch API**
+   - Differences between AJAX and Fetch API
+   - Client-server communication
 7. **jQuery**
+   - Introduction to jQuery
+   - Simple tic-tac-toe game
