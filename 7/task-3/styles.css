@@ -1,0 +1,25 @@
+.container {
+    padding: 20px;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+#search input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+#search button {
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+    background-color:  rgb(75, 132, 236);
+    color: white;
+}
+
+#result {
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+}

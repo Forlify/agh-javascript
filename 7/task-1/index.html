@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>
+        Tytuł strony
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            let $span = $('#elementSPAN')
+            let text;
+            let color;
+
+            $span.on('mouseenter', function () {
+                text = $span.text();
+                color = $span.css('background-color');
+                $span.css('background-color', 'red');
+
+                if (isNaN(text)) $span.text('Nie-liczba');
+                else $span.text(parseInt(text) + 10);
+            });
+
+            $span.on('mouseleave', function () {
+                $span.text(text);
+                $span.css('background-color', color);
+            });
+
+            $span.on('click', function () {
+                $span.css('display', 'block');
+                $span.css('width', '250px');
+                $span.css('height', '250px');
+            });
+        });
+    </script>
+    <main style="font-size: 30px;">
+        Text <span id='elementSPAN'>123</span>
+    </main>
+</body>
+
+</html>
