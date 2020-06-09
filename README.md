@@ -6,8 +6,8 @@ Repository for JavaScript laboratories at AGH UST, Poland.
    - Basics
    - Responsive website using Foundation and Bulma
 2. **JavaScript**
-   - canvas element
-   - forms and event handling
+   - Canvas element
+   - Forms and event handling
    - Unit tests (Mocha and Chai)
 3. **DOM 4 Standard**
    - Web Components
